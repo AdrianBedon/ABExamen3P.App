@@ -54,5 +54,18 @@ namespace ABExamen3P.ABData
             List<ABPokemonDataCompleta> pokemons = conn.Table<ABPokemonDataCompleta>().ToList();
             return pokemons;
         }
+
+        public ABPokemonDataCompleta GetPokemon(int id)
+        {
+            ABPokemonDataCompleta pok = new ABPokemonDataCompleta();
+            Init();
+            List<ABPokemonDataCompleta> pokemons = conn.Table<ABPokemonDataCompleta>().ToList();
+            foreach (ABPokemonDataCompleta pokemon in pokemons)
+            {
+                if (pokemon.ABId == id)
+                    pok = pokemon;
+            }
+            return pok;
+        }
     }
 }
