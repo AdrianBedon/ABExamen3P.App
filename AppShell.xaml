@@ -4,21 +4,16 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ABExamen3P.ABViews"
-    Shell.FlyoutBehavior="Disabled">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:ABListadoDePokemon}"
-        Route="MainPage"/>
+    BackgroundColor="Black">
 
     <FlyoutItem Route="ABMain" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent
             Title="Pokemones API"
-            Icon="vehicle_icon.png"
+            Icon="pokemon_icon.png"
             ContentTemplate="{DataTemplate local:ABListadoDePokemon}"/>
         <ShellContent
             Title="Mis Pokemones" 
-            Icon="vehicles_icon.png"
+            Icon="pokemon_icon.png"
             ContentTemplate="{DataTemplate local:ABListaLocal}"/>
     </FlyoutItem>
 

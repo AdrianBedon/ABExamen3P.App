@@ -48,7 +48,7 @@ namespace ABExamen3P.ABData
             return result;
         }
 
-        public List<ABPokemonDataCompleta> GetAllVehicles()
+        public List<ABPokemonDataCompleta> GetAllPokemons()
         {
             Init();
             List<ABPokemonDataCompleta> pokemons = conn.Table<ABPokemonDataCompleta>().ToList();

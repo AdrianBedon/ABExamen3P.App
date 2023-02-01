@@ -58,6 +58,9 @@
 	  <MauiXaml Update="ABViews\ABListadoDePokemon.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ABViews\ABListaLocal.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

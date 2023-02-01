@@ -3,10 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ABExamen3P.ABViews.ABListaLocal"
              Title="ABListaLocal">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <CollectionView x:Name="ABPokemonListLocal"
+                        Margin="20"
+                        SelectionMode="Single"
+                        SelectionChanged="pokemonCollectionLocal_SelectionChanged">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Grid ColumnDefinitions="*,*">
+                        <StackLayout>
+                            <Label Text="{Binding ABNombre}" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="{Binding ABTipo}" FontAttributes="Bold" TextColor="Gray"/>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>
