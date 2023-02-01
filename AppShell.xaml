@@ -9,6 +9,17 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:ABListadoDePokemon}"
-        Route="MainPage" />
+        Route="MainPage"/>
+
+    <FlyoutItem Route="ABMain" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Title="Pokemones API"
+            Icon="vehicle_icon.png"
+            ContentTemplate="{DataTemplate local:ABListadoDePokemon}"/>
+        <ShellContent
+            Title="Mis Pokemones" 
+            Icon="vehicles_icon.png"
+            ContentTemplate="{DataTemplate local:ABListaLocal}"/>
+    </FlyoutItem>
 
 </Shell>

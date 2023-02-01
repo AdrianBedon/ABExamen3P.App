@@ -17,7 +17,6 @@
                     <Grid ColumnDefinitions="*,*">
                         <StackLayout>
                             <Label Text="{Binding name}" FontAttributes="Bold" TextColor="Black"/>
-                            <Label Text="{Binding url}" TextColor="Gray"/>
                         </StackLayout>
                     </Grid>
                 </StackLayout>

@@ -35,8 +35,28 @@ public partial class ABListadoDePokemon : ContentPage
         }
     }
 
-    private void pokemonCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void pokemonCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
+        if (e.CurrentSelection.Count != 0)
+        {
+            var pokemon = new ABPokemonDataCompleta();
 
+            var result = (Pokemon)e.CurrentSelection[0];
+
+            pokemon.ABNombre = result.name;
+
+            string action = await DisplayActionSheet("Seleccione la acción que desea realizar:", "Cancel", null, "Añadir a base local");
+
+            if (action == "Añadir a base local")
+            {
+                App.PokemonRepo.AddNewPokemon(pokemon);
+            }
+            else
+            {
+                LoadPokemon();
+            }
+        }
+
+        ABPokemonList.SelectedItem = null;
     }
 }
